@@ -1,0 +1,98 @@
+sp_wup = input("Is this for when to sleep or when to wake up? Input either: sleep for when to sleep or wake up for when to wake up. ")
+time = []
+
+
+acc_min = 60 * (time[0] * 10 + time[1]) + (time[2] * 10 + time[3])
+
+
+
+wktime1 = 0
+wktime2 = 0
+wktime3 = 0
+wktime4 = 0
+
+wktime5 = ("")
+wktime6 = ("")
+wktime7 = ("")
+wktime8 = ("")
+
+
+
+sptime1 = 0
+sptime2 = 0
+sptime3 = 0
+sptime4 = 0
+
+sptime5 = ("")
+sptime6 = ("")
+sptime7 = ("")
+sptime8 = ("")
+
+if sp_wup == 'sleep':
+    sptime = input("Enter the time for when you want to wake up so we can tell you when to sleep. The form of the input should be in 24 hour time with 12am looking like 00:00. ").split(':')
+    inputs()
+    spcal()
+    prsp()
+
+elif sp_wup == 'wake up':
+    wktime = input("Enter the time for when you want to sleep so we can tell you when to wake up. The form of the input should be in 24 hour time with 12am looking like 00:00. ").split(':')
+    inputs()
+    wkcal()
+    prwk()
+else:
+    print("That input is invalid, make sure to read the instructions and enter a valid input. ")
+    sp_wup = input("Is this for when to sleep or when to wake up? Input either: sleep for when to sleep or wake up for when to wake up. ")
+
+
+
+def inputs():
+    if sp_wup == 'sleep':
+        for i in sptime:
+            time.append(i)
+    elif sp_wup == 'wake up':
+        for i in wktime:
+            time.append(i)
+    
+def wkcal():
+    acc_min += 15
+    acc_min += 180
+    wktime1 = acc_min
+    acc_min += 90
+    wktime2 = acc_min
+    acc_min += 90
+    wktime3 = acc_min
+    acc_min += 90
+    wktime4 = acc_min
+
+def spcal():
+    acc_min = acc_min - 15
+    acc_min = acc_min - 180
+    sptime1.append(int(acc_min))
+    acc_min =  acc_min - 90
+    sptime2.append(int(acc_min))
+    acc_min =  acc_min - 90
+    sptime3.append(int(acc_min))
+    acc_min =  acc_min - 90
+    sptime4.append(int(acc_min))
+
+def prwk():
+    wktime5 = str(acc_min / 60) + ":" + str(acc_min % 60)
+    wktime6 = str(acc_min / 60) + ":" + str(acc_min % 60)
+    wktime7 = str(acc_min / 60) + ":" + str(acc_min % 60)
+    wktime8 = str(acc_min / 60) + ":" + str(acc_min % 60)
+    print("The times to wake up are: ")
+    print(wktime5)
+    print(wktime6)
+    print(wktime7)
+    print("and",wktime8)
+
+def prsp():
+    sptime5 = str(acc_min / 60) + ":" + str(acc_min % 60)
+    sptime6 = str(acc_min / 60) + ":" + str(acc_min % 60)
+    sptime7 = str(acc_min / 60) + ":" + str(acc_min % 60)
+    sptime8 = str(acc_min / 60) + ":" + str(acc_min % 60)
+    print("The times to sleep are: ")
+    print(sptime5)
+    print(sptime6)
+    print(sptime7)
+    print("and",sptime8)
