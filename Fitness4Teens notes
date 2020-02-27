@@ -1,0 +1,64 @@
+print("Welcome to your fitness guide that will give you tips on how to stay healthy while maintaining a busy lifestyle. ")
+
+def nutrition():
+    print("Intro to nutrition: Nutrition is the process of obtaining the food necessary for health and growth according to google. ")
+    nutin = input("""What do you want to learn about nutrition. 
+    Type function if you want to know the function of foods.
+    Type classification if you want to know nutrient classification.
+    Type macronutrients if you want to know the macronutrients your body needs.
+    Type carbs if you want to know what carbohydrates do for your body.
+    Type protein if you want to know what proteins do for your body.
+    Type fats if you want to know what fats do for your body.
+    Type micronutrients if you want to know about micronutrients.
+    Type water if you want to know what water does for your body. """)
+    
+    if nutin == 'function':
+        
+        print("Nutrients provide energy, regulate body processes and greatly help in the growth, repair and maintenance of tissues.")
+
+    elif nutin == 'classification':
+
+        print("""These are the Classification of the nutrients:
+        Macronutrients:
+        - Carbohydrates
+        - Fats
+        -Proteins
+        MicroNutrients:
+        -Vitamins
+        -Minerals
+        Essential Nutrient:
+        -water """)
+
+    elif nutin == 'macronutrients':
+        print("There are carbohydrates, proteins and fats. ")
+
+    elif nutin == 'carbs':
+        print(""" The role of these macros is to refuel the body during high intensity exercise (including HIIT).
+        It fuels the brain and spares protein to preserve muscle mass during exercise.
+        If you are sedentary: It should make up 40-50% of your daily calories, If you are fairly active it should be 60% of your calories and if if you are a heavy trainer or athlete it should be 70% of your calories.
+        Note that 1 gram of carbs is 4 calories and is usually found in grains, dairy and fruit.""")
+
+    elif nutin == 'protein':
+        print(""" Protein is overall very important in the tissue structure and important with metabolic regulation.
+        The recommended daily allowance is based on grams per pound of body weight. If you are sedentary: you should consume 0.36 g per pound of body weight, if you are recreation ally active: you should consume 0.45-0.68 g per pound of body weight, if you are a competitive athlete (engage in sports competitively usually on a time): you need 0.54-0.82 g per pound of body weight and if you are a teenage athlete: you should consume 0.82 - 0.91 g of protein per pound of body weight.
+        Just like carbs, 1 g of protein is 4 calories and is usually found in beans, meat, nuts, lentils, seeds, meat alternatives and some vegetables (notably broccoli). """)
+
+    elif nutin == 'fats':
+        print("""The role of fat is to store energy in the body, provide insulation, transport fat soluble vitamins and protect vital organs.
+        It is recommended that 20-35% of your daily calories should be fats and saturated fats should only make up less than 10%.
+        Unlike carbs and proteins, 1 g of fat has 9 calories and fats is found in oils, nuts, meat and nuts.""")
+
+    elif nutin == 'micronutrients':
+        print("""Vitamins: 
+        There are water soluble and fat soluble vitamins and all of these perform important roles in regulating and making bodily processes more efficient.
+        Nutrition labels can easily help you determine if you have acquired 100% of a certain vitamin.
+        
+        Minerals: 
+        These also regulate body functions. Nutrition labels can easily help you determine if you have acquired 100% of a certain vitamin.""")
+
+    elif nutin == 'water':
+        print("This moistens tissues, protects tissue, prevents excretory issues such as constipation, regulates body temperature, lubricates joints and carries nutrients and oxygen to cells.  Water has no calories and is a great way to fight cravings.")
+    
+    else:
+        print("You have not chosen an option, make sure to choose an option carefully.")
+        nutrition()
