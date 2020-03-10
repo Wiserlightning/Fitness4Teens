@@ -62,3 +62,4 @@ def nutrition():
     else:
         print("You have not chosen an option, make sure to choose an option carefully.")
         nutrition()
+nutrition()

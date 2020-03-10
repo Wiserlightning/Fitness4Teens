@@ -1,5 +1,5 @@
 from tkinter import *
-
+#Welcome to my app, if you want to add anything to this new GUI to give back to community feel free to
 class Window(Frame):
 
     def __init__(self, master = None):

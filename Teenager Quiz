@@ -1,0 +1,8 @@
+score = 0 
+first = input("Name one of the macronutrients: ")
+if first == "Carbohydrates" or first == "Fats" or first == "Proteins" :
+    score += 1
+    print("Yes you are correct. Your score is now:",score,".")
+else:
+    score = score 
+    print("No you are incoreect. Your score is now:",score,".")
