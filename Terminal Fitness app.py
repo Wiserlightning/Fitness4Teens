@@ -1,4 +1,4 @@
-def new_file_and_exercise()
+def new_file_and_exercise():
     a = input("What do you want to call your fitness tracker? ")
     new_file = open(a+".txt", 'w') #creates a new file
     print("Created new file. ")
@@ -10,5 +10,5 @@ def new_file_and_exercise()
     else:
         print("We will reset the app now so you can input another one.")
         new_file_and_exercise()
-        
+
 new_file_and_exercise()
