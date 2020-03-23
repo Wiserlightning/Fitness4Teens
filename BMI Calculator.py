@@ -5,7 +5,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
 import sys
 
-class Ui_MainWindow(object):
+class Ui_MainWindow(object): #creating the window
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(927, 506)
@@ -98,7 +98,7 @@ class Ui_MainWindow(object):
             self.horizontalSlider.setSliderPosition(int(1))
 
 
-    def button_click(self):
+    def button_click(self): #calculations
         self.j = int(self.lineEdit_2.text())
         self.k = int(self.lineEdit.text())
         self.bmi =self.j/((self.k/100)**2)
@@ -107,7 +107,7 @@ class Ui_MainWindow(object):
         self.plainTextEdit.setPlainText(self.string)
 
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, MainWindow): #labelling
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "BMI"))
         self.pushButton.setText(_translate("MainWindow", "calculate"))
